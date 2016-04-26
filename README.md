@@ -7,4 +7,4 @@ My machine setup, powered by Ansible.
 
 - Install Ansible 2.0+
 - Run `ansible-galaxy install -r requirements.yml`
-- Run `ansible-playbook -i hosts local.yml`
+- Run `ansible-playbook -i hosts --ask-sudo-pass local.yml`

@@ -1,2 +1,7 @@
-- hosts: automation
+- hosts: localhost
   become: false
+  connection: local
+  roles:
+    # - 
+  tasks:
+    - include: tasks/dotfiles.yml
