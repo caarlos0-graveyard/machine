@@ -1,0 +1,2 @@
+- hosts: automation
+  become: false
