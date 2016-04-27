@@ -12,10 +12,12 @@
     # specific stuff than can be commented out:
     - include: tasks/atom.yml
     - include: tasks/chrome.yml
+    - include: tasks/diffmerge.yml
     - include: tasks/docker.yml
     - include: tasks/golang.yml
     - include: tasks/java.yml
     - include: tasks/node.yml
+    - include: tasks/postgres.yml
     - include: tasks/python.yml
     - include: tasks/quicklook.yml
     - include: tasks/ruby.yml
