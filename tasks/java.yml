@@ -22,5 +22,5 @@
 - name: Install Maven and Gradle
   package: name={{item}}
   with_items:
-    - maven
     - gradle
+    - maven
