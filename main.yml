@@ -21,6 +21,7 @@
     - include: tasks/python.yml
     - include: tasks/quicklook.yml
     - include: tasks/ruby.yml
+    - include: tasks/slack.yml
     - include: tasks/spotify.yml
     - include: tasks/sublime-text.yml
     - include: tasks/telegram.yml
