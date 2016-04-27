@@ -6,20 +6,25 @@
     - ubuntu-restricted-extras
     - xsel
   when: ansible_distribution == 'Ubuntu'
-- name: Install core packages
+- name: Install OSX-only core packages
   package: name={{item}}
   with_items:
     - coreutils
-    - curl
     - findutils
     - gawk
-    - git
     - gnu-getopt
     - gnu-indent
     - gnu-sed
     - gnu-tar
     - gnutls
     - grc
+    - unrar
+  when: ansible_os_family == 'Darwin'
+- name: Install core packages
+  package: name={{item}}
+  with_items:
+    - curl
+    - git
     - htop
     - vim
     - wget

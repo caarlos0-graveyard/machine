@@ -1,0 +1,16 @@
+- name: Add Docker repository
+  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main'
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Docker
+  package: docker-engine
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Docker for Mac
+  homebrew_cask: docker
+  when: ansible_os_family == 'Darwin'
+- name: Install Docker tools
+  package: name={{item}}
+  with_items:
+    - docker
+    - docker-compose
+    - docker-swarm
+  when: ansible_os_family == 'Darwin'

@@ -10,10 +10,11 @@
     - include: tasks/dotfiles.yml
 
     # specific stuff than can be commented out:
-    - include: tasks/terminal.yml
     - include: tasks/chrome.yml
-    - include: tasks/telegram.yml
-    - include: tasks/spotify.yml
+    - include: tasks/docker.yml
     - include: tasks/java.yml
-    - include: tasks/vpn.yml
     - include: tasks/quicklook.yml
+    - include: tasks/spotify.yml
+    - include: tasks/telegram.yml
+    - include: tasks/terminal.yml
+    - include: tasks/vpn.yml
