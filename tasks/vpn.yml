@@ -1,0 +1,9 @@
+- name: Install OpenVPN stuff
+  package: name={{item}}
+  with_items:
+    - openvpn
+    - network-manager-openvpn
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Viscosity
+  homebrew_cask: name=viscosity
+  when: ansible_os_family == 'Darwin'

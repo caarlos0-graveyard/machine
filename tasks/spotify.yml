@@ -1,0 +1,9 @@
+- name: Add Spotify repository
+  apt_repository: repo='ppa:atareao/telegram'
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Spotify
+  package: name=spotify-client
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Spotify
+  homebrew_cask: name=spotify
+  when: ansible_os_family == 'Darwin'

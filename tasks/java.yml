@@ -1,5 +1,5 @@
 - name: Install Java
-  homebrew_cask: name={{item}} state=present
+  homebrew_cask: name={{item}}
   with_items:
     - java
     - java7
@@ -14,13 +14,13 @@
     - oracle-java8-installer
   when: ansible_distribution == 'Ubuntu'
 - name: Install Java
-  package: name={{item}} state=present
+  package: name={{item}}
   with_items:
     - oracle-java7-installer
     - oracle-java8-installer
   when: ansible_distribution == 'Ubuntu'
 - name: Install Maven and Gradle
-  package: name={{item}} state=present
+  package: name={{item}}
   with_items:
     - maven
     - gradle

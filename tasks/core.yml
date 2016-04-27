@@ -1,0 +1,17 @@
+- name: Install Ubuntu-only core packages
+  package: name={{item}}
+  with_items:
+    - ubuntu-restricted-extras
+    - xsel
+    - smbclient
+    - openssh-server
+  when: ansible_distribution == 'Ubuntu'
+- name: Install core packages
+  package: name={{item}}
+  with_items:
+    - git
+    - zsh
+    - htop
+    - curl
+    - wget
+    - vim
