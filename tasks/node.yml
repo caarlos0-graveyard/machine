@@ -1,0 +1,9 @@
+- name: Install Node
+  package: name=node
+  when: ansible_os_family == 'Darwin'
+- name: Add node repository
+  command: curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Node
+  package: name=nodejs
+  when: ansible_distribution == 'Ubuntu'

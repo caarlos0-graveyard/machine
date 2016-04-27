@@ -1,0 +1,6 @@
+# TODO install pyenv on ubuntu too
+- name: Install Python
+  package: name=python
+- name: Install PyEnv
+  package: name=pyenv
+  when: ansible_os_family == 'Darwin'

@@ -1,0 +1,6 @@
+# TODO install rbenv on ubuntu too
+- name: Install Ruby
+  package: name=ruby
+- name: Install rbenv
+  package: name=rbenv
+  when: ansible_os_family == 'Darwin'

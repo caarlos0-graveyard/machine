@@ -1,0 +1,6 @@
+- name: Install Atom
+  apt: deb=https://github.com/atom/atom/releases/download/v1.7.2/atom-amd64.deb
+  when: ansible_distribution == 'Ubuntu'
+- name: Install Atom
+  homebrew_cask: name=atom
+  when: ansible_os_family == 'Darwin'

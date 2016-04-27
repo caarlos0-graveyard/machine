@@ -1,0 +1,9 @@
+- name: Add SublimeText repository
+  apt_repository: ppa:'webupd8team/sublime-text-3'
+  when: ansible_distribution == 'Ubuntu'
+-name: Install SublimeText
+  package: sublime-text-installer
+  when: ansible_distribution == 'Ubuntu'
+- name: Install SublimeText
+  homebrew_cask: name=sublime-text
+  when: ansible_os_family == 'Darwin'
