@@ -1,7 +1,15 @@
 # machine
 
-My machine setup, powered by Ansible.
+Machine setup, powered by Ansible.
 
+I'm splitting my [dotfiles](https://github.com/caarlos0/dotfiles) repo
+in two repos:
+
+- dotfiles now handles only configuration
+- machine (this) installs stuff (including my dotfiles)
+
+For now, almost everything is a task, later I might migrate some of them
+to roles, so they can evolve separately and be used by other people as well.
 
 ## Usage:
 
