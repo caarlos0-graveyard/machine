@@ -1,14 +1,15 @@
 #!/bin/bash
 # check for homebrew
 if test "$(uname)" = "Darwin"; then
+  if test ! $(which gcc); then
+    xcode-select --install
+  fi
   if test ! "$(which brew)"; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
   brew install ansible
 elif test "$(uname)" = "Linux"; then
-  if test "$(which yum)"; then
-    sudo yum install ansible
-  elif test "$(which apt)"; then
+  if test "$(which apt)"; then
     sudo apt-get install software-properties-common
     sudo apt-add-repository ppa:ansible/ansible
     sudo apt-get update
@@ -16,5 +17,10 @@ elif test "$(uname)" = "Linux"; then
   fi
 fi
 
+if test ! "$(which ansible)"; then
+  echo "Not supported yet."
+  exit 1
+fi
+
 ansible-galaxy install -r requirements.yml -p roles
-ansible-playbook -i hosts --ask-sudo-pass main.yml
+ansible-playbook main.yml -K

@@ -2,6 +2,8 @@
   become: false
   connection: local
   roles:
-    # - 
+    # -
   tasks:
+    - include: tasks/homebrew.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/java.yml

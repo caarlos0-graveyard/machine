@@ -1,5 +1,7 @@
 - name: Download dotfiles
   git: repo=https://github.com/caarlos0/dotfiles.git dest=~/.dotfiles update=yes version=ansible
+- name: Instal antibody
+  shell: curl -s https://raw.githubusercontent.com/getantibody/installer/master/install | bash -s
 - name: Setup dotfiles
   shell: cd ~/.dotfiles && ./script/bootstrap
 - name: Set zsh as default shell
