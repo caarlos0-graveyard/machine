@@ -5,12 +5,5 @@
   package: docker-engine
   when: ansible_distribution == 'Ubuntu'
 - name: Install Docker for Mac
-  homebrew_cask: docker
-  when: ansible_os_family == 'Darwin'
-- name: Install Docker tools
-  package: name={{item}}
-  with_items:
-    - docker
-    - docker-compose
-    - docker-swarm
+  homebrew_cask: name=docker
   when: ansible_os_family == 'Darwin'
