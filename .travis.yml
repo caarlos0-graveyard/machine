@@ -1,7 +1,7 @@
-language: ruby
+sudo: required
+script: ./setup
 os:
   - linux
   - osx
-script: ./setup
 notifications:
   email: false
