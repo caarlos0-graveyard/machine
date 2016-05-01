@@ -1,6 +1,7 @@
 - name: Install Slack
   apt: deb=https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-1.1.5-amd64.deb
   when: ansible_distribution == 'Ubuntu'
+
 - name: Install Slack
   homebrew_cask: name=slack
   when: ansible_os_family == 'Darwin'

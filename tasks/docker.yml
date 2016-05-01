@@ -4,6 +4,8 @@
 - name: Install Docker
   package: name=docker-engine
   when: ansible_distribution == 'Ubuntu'
-- name: Install Docker for Mac
-  homebrew_cask: name=docker
-  when: ansible_os_family == 'Darwin'
+
+# TODO: waiting for docker for mac exit beta
+# - name: Install Docker for Mac
+#   homebrew_cask: name=docker
+#   when: ansible_os_family == 'Darwin'

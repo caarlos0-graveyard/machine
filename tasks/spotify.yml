@@ -1,9 +1,13 @@
+- name: Add Spotify apt keys
+  apt_key: keyserver=keyserver.ubuntu.com id=D2C19886
+  when: ansible_distribution == 'Ubuntu'
 - name: Add Spotify repository
-  apt_repository: repo='ppa:atareao/telegram'
+  apt_repository: repo='deb http://repository.spotify.com stable non-free'
   when: ansible_distribution == 'Ubuntu'
 - name: Install Spotify
   package: name=spotify-client
   when: ansible_distribution == 'Ubuntu'
+
 - name: Install Spotify
   homebrew_cask: name=spotify
   when: ansible_os_family == 'Darwin'

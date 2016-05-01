@@ -3,3 +3,4 @@
   when: ansible_distribution == 'Ubuntu'
 - name: Install Golang
   package: name=golang
+  become: ansible_distribution == 'Ubuntu'

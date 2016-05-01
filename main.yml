@@ -1,5 +1,5 @@
 - hosts: localhost
-  become: false
+  become: ansible_distribution == 'Ubuntu'
   connection: local
   roles:
     # -

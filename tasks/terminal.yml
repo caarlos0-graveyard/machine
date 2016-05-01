@@ -1,6 +1,7 @@
 - name: Install Terminator
   package: name=terminator
   when: ansible_distribution == 'Ubuntu'
+
 - name: Install iTerm
   homebrew_cask: name=iterm2-beta
   when: ansible_os_family == 'Darwin'
