@@ -1,11 +1,3 @@
-# TODO antibody install should be done by dotfiles, I think..
-- name: Install antibody
-  shell: curl -s https://raw.githubusercontent.com/getantibody/installer/master/install | bash -s
-  when: ansible_distribution == 'Ubuntu'
-- name: Install antibody
-  homebrew: package=antibody
-  when: ansible_os_family == 'Darwin'
-
 - name: Download dotfiles
   git: repo=https://github.com/caarlos0/dotfiles.git dest=~/.dotfiles update=yes version=ansible
   become: false
