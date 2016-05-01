@@ -27,4 +27,4 @@ if test ! "$(which ansible)"; then
 fi
 
 ansible-galaxy install -r requirements.yml -p roles
-ansible-playbook main.yml -K
+ansible-playbook main.yml
