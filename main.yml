@@ -19,6 +19,7 @@
     - include: tasks/postgres.yml
     - include: tasks/python.yml
     - include: tasks/quicklook.yml
+      when: ansible_os_family == 'Darwin'
     - include: tasks/ruby.yml
     - include: tasks/slack.yml
     - include: tasks/spotify.yml

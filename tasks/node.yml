@@ -4,7 +4,7 @@
 
 - name: Add node repository
   command: curl -sL https://deb.nodesource.com/setup_5.x | bash -
-  when: ansible_distribution == 'Ubuntu'
+  when: ansible_os_family == 'Debian'
 - name: Install Node
   package: name=nodejs
-  when: ansible_distribution == 'Ubuntu'
+  when: ansible_os_family == 'Debian'
