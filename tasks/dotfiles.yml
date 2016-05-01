@@ -19,5 +19,5 @@
   become: false
 - name: Set zsh as default shell
   shell: chsh -s /bin/zsh
-  when: ansible_env.TRAVIS_JOB_ID != ''
+  when: ansible_env.TRAVIS_JOB_ID == ''
   become: false
