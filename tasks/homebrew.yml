@@ -1,6 +1,5 @@
 - name: Update Homebrew
   command: brew update
-  when: ansible_os_family == 'Darwin'
 - name: Add Homebrew taps
   homebrew_tap: tap={{item}}
   with_items:
@@ -8,4 +7,3 @@
     - caskroom/fonts
     - caskroom/versions
     - getantibody/homebrew-antibody
-  when: ansible_os_family == 'Darwin'

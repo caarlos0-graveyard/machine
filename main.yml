@@ -1,11 +1,10 @@
 - hosts: localhost
-  become: ansible_distribution == 'Ubuntu'
-  connection: local
   roles:
     # -
   tasks:
     # essentials:
     - include: tasks/homebrew.yml
+      when: ansible_os_family == 'Darwin'
     - include: tasks/core.yml
     - include: tasks/dotfiles.yml
 

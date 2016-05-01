@@ -1,6 +1,5 @@
 #!/bin/bash
 set -x
-
 if test "$(uname)" = "Darwin"; then
   if test ! $(which gcc); then
     echo "Installing xcode..."
@@ -20,6 +19,12 @@ elif test "$(uname)" = "Linux"; then
     sudo apt-add-repository -y ppa:ansible/ansible
     sudo apt-get update
     sudo apt-get install -y ansible
+    cat <<EOF >> ./ansible.cfg
+
+[privilege_escalation]
+become = True
+become_ask_pass = True
+EOF
   fi
 fi
 
@@ -28,5 +33,5 @@ if test ! "$(which ansible)"; then
   exit 1
 fi
 
-ansible-galaxy install -r requirements.yml -p roles
+ansible-galaxy install -r requirements.yml
 ansible-playbook main.yml
