@@ -9,3 +9,4 @@
     - caskroom/fonts
     - caskroom/versions
     - getantibody/homebrew-antibody
+  when: ansible_os_family == 'Darwin'
