@@ -4,9 +4,9 @@
   shell: curl -s https://raw.githubusercontent.com/getantibody/installer/master/install | bash -s
   when: ansible_distribution == 'Ubuntu'
 - name: Install antibody
-  homebrew: antibody
+  homebrew: package=antibody
   when: ansible_os_family == 'Darwin'
 - name: Setup dotfiles
   shell: cd ~/.dotfiles && ./script/bootstrap
 - name: Set zsh as default shell
-  shell: chsh -s $(which zsh)
+  shell: chsh -s /bin/zsh

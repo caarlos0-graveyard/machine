@@ -2,5 +2,5 @@
   apt: deb=https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   when: ansible_distribution == 'Ubuntu'
 - name: Install Chrome
-  homebrew_cask: name=chrome
+  homebrew_cask: name=google-chrome
   when: ansible_os_family == 'Darwin'
