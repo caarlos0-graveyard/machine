@@ -23,7 +23,6 @@ elif test "$(uname)" = "Linux"; then
 
 [privilege_escalation]
 become = True
-become_ask_pass = True
 EOF
   fi
 fi
