@@ -19,8 +19,8 @@ $ unzip machine-master.zip
 $ cd machine-master
 ```
 
-In this point, you might want to edit `main.yml` file and comment out stuff you
-don't want. Then:
+At this point, you might want to edit the `main.yml` file and comment
+out stuff you don't want, when you're done, simply run:
 
 ```console
 $ ./setup
