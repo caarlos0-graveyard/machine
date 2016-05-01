@@ -1,5 +1,5 @@
 - name: Download atom
-  get_url: url="https://atom.io/download/deb" dest=/tmp/atom.deb validate_certs=no
+  get_url: url="https://atom.io/download/deb" dest="/tmp/atom.deb"
   when: ansible_os_family == 'Debian'
 - name: Install Atom
   apt: deb=/tmp/atom.deb
