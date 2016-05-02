@@ -3,6 +3,8 @@
     # -
   tasks:
     # essentials:
+    - include: tasks/apt.yml
+      when: ansible_os_family == 'Debian'
     - include: tasks/homebrew.yml
       when: ansible_os_family == 'Darwin'
     - include: tasks/core.yml
