@@ -6,6 +6,6 @@ matrix:
       sudo: required
     - os: osx
 install: pip install ansible
-script: ansible-playbook main.yml
+script: ansible-playbook -b main.yml
 notifications:
   email: false
