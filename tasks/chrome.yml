@@ -5,7 +5,7 @@
   apt_repository: repo='deb http://dl.google.com/linux/chrome/deb/ stable main'
   when: ansible_os_family == 'Debian'
 - name: Install Chrome
-  package: google-chrome-stable
+  package: name=google-chrome-stable
   when: ansible_os_family == 'Debian'
 
 - name: Install Chrome
