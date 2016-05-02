@@ -22,12 +22,12 @@ elif test "$(uname)" = "Linux"; then
     sudo apt-add-repository -y ppa:ansible/ansible
     sudo apt-get update
     sudo apt-get install -y ansible
-    cat <<EOF >> ./ansible.cfg
+  fi
+  cat <<EOF >> ./ansible.cfg
 
 [privilege_escalation]
 become = True
 EOF
-  fi
 fi
 
 if test ! "$(which ansible)"; then
