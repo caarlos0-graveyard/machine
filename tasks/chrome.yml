@@ -1,11 +1,11 @@
-# TODO: simplify this once ansible 2.1 is out
-- name: Download Chrome
-  get_url:
-    url=https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    dest=/tmp/chrome.deb
+- name: Add Chrome apt keys
+  apt_key: keyserver=dl-ssl.google.com/linux/linux_signing_key.pub
+  when: ansible_os_family == 'Debian'
+- name: Add Chrome PPA
+  apt_repository: repo='deb http://dl.google.com/linux/chrome/deb/ stable main'
   when: ansible_os_family == 'Debian'
 - name: Install Chrome
-  apt: deb=/tmp/chrome.deb
+  package: google-chrome-stable
   when: ansible_os_family == 'Debian'
 
 - name: Install Chrome
