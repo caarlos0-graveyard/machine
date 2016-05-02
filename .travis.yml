@@ -1,9 +1,10 @@
-sudo: required
 language: python
-dist: trusty
-os:
-  - linux
-  - osx
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+    - os: osx
 install: pip install ansible
 script: ansible-playbook main.yml
 notifications:
