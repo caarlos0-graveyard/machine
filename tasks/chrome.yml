@@ -1,5 +1,5 @@
 - name: Add Chrome apt keys
-  apt_key: keyserver=dl-ssl.google.com/linux/linux_signing_key.pub
+  apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub
   when: ansible_os_family == 'Debian'
 - name: Add Chrome PPA
   apt_repository: repo='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
