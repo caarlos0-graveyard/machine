@@ -32,5 +32,6 @@ if test ! "$(which ansible)"; then
   exit 1
 fi
 
+python --version
 ansible-galaxy install -r requirements.yml
 ansible-playbook main.yml
