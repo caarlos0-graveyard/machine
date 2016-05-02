@@ -13,7 +13,10 @@ if test "$(uname)" = "Darwin"; then
   brew update
   brew install ansible
 elif test "$(uname)" = "Linux"; then
-  if test -f /etc/lsb-release; then
+  if test "$(which pip)"; then
+    echo "Installing ansible..."
+    sudo pip install ansible
+  elif test -f /etc/lsb-release; then
     echo "Installing ansible..."
     sudo apt-get install -y software-properties-common
     sudo apt-add-repository -y ppa:ansible/ansible
