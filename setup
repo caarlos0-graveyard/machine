@@ -33,5 +33,4 @@ fi
 
 python --version
 ansible --version
-uname -a
 ansible-playbook main.yml

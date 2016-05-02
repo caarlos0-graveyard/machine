@@ -1,8 +1,12 @@
 sudo: required
-script: ./setup
+language: python
 dist: trusty
+python: "3.4"
 os:
   - linux
   - osx
+script:
+  - pip install ansible
+  - ansible-playbook main.yml
 notifications:
   email: false
