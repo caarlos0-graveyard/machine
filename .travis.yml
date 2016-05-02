@@ -1,5 +1,8 @@
 sudo: required
 script: ./setup
+language: python
+python:
+  - "2.7.11"
 os:
   - linux
   - osx

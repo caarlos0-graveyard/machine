@@ -15,7 +15,7 @@ to roles, so they can evolve separately and be used by other people as well.
 
 ```console
 $ wget https://github.com/caarlos0/machine/archive/master.zip
-$ unzip machine-master.zip
+$ unzip master.zip
 $ cd machine-master
 ```
 
