@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 if test "$(uname)" = "Darwin"; then
   if test ! $(which gcc); then
     echo "Installing xcode..."
@@ -33,4 +32,6 @@ if test ! "$(which ansible)"; then
 fi
 
 python --version
+ansible --version
+uname -a
 ansible-playbook main.yml
