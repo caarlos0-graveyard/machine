@@ -1,8 +1,8 @@
+# TODO: simplify this once ansible 2.1 is out
 - name: Download Slack
   get_url:
     url=https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-1.1.5-amd64.deb
     dest=/tmp/slack.deb
-    validate_certs=no
   when: ansible_os_family == 'Debian'
 - name: Install Slack
   apt: deb=/tmp/slack.deb
