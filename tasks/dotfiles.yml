@@ -12,17 +12,17 @@
     -e "s/AUTHOREMAIL/dotfiles-demo/g"
     -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g"
     ~/.dotfiles/git/gitconfig.symlink.example > ~/.dotfiles/git/gitconfig.symlink
-  when: ansible_env.TRAVIS_JOB_ID != ''
+  when: ansible_env.TRAVIS_JOB_ID is defined
   become: false
 - name: Setup dotfiles for testing
   shell: cd ~/.dotfiles && ./script/bootstrap --override-all
-  when: ansible_env.TRAVIS_JOB_ID != ''
+  when: ansible_env.TRAVIS_JOB_ID is defined
   become: false
 - name: Setup dotfiles
   shell: cd ~/.dotfiles && ./script/bootstrap
-  when: ansible_env.TRAVIS_JOB_ID == ''
+  when: ansible_env.TRAVIS_JOB_ID is not defined
   become: false
 - name: Set zsh as default shell
   shell: chsh -s /bin/zsh
-  when: ansible_env.TRAVIS_JOB_ID == ''
+  when: ansible_env.TRAVIS_JOB_ID is not defined
   become: false
