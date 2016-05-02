@@ -1,6 +1,9 @@
 # TODO: simplify this once ansible 2.1 is out
 - name: Download atom
-  get_url: url='https://atom.io/download/deb' dest=/tmp/atom.deb
+  get_url:
+    url='https://atom.io/download/deb'
+    dest=/tmp/atom.deb
+    validate_certs=no
   when: ansible_os_family == 'Debian'
 - name: Install Atom
   apt: deb=/tmp/atom.deb
