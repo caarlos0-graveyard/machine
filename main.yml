@@ -24,6 +24,8 @@
       when: ansible_os_family == 'Darwin'
     - include: tasks/ruby.yml
     - include: tasks/slack.yml
+    - include: tasks/slate.yml
+      when: ansible_os_family == 'Darwin'
     - include: tasks/spotify.yml
     - include: tasks/sublime-text.yml
     - include: tasks/telegram.yml
