@@ -4,6 +4,7 @@ matrix:
       dist: trusty
       sudo: required
     - os: osx
+install: pip install ansible
 script: ./setup
 notifications:
   email: false
