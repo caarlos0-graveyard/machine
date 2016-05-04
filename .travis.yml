@@ -1,12 +1,15 @@
-language: python
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: required
-      python: "3.4"
-      install: pip install ansible
-    - os: osx
+language: generic
+os:
+  - linux
+  - osx
+# matrix:
+#   include:
+#     - os: linux
+#       dist: trusty
+#       sudo: required
+#       python: "3.4"
+#       install: pip install ansible
+#     - os: osx
 notifications:
   email: false
 script: ./setup
