@@ -3,8 +3,11 @@ matrix:
     - os: linux
       dist: trusty
       sudo: required
+      python: "3.4"
+      install:
+        - pip install --upgrade pip
+        - pip install ansible
     - os: osx
-install: pip install ansible
-script: ./setup
 notifications:
   email: false
+script: ./setup
