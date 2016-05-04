@@ -1,11 +1,9 @@
-language: python
 matrix:
   include:
     - os: linux
       dist: trusty
       sudo: required
     - os: osx
-install: pip install ansible
-script: ansible-playbook -b main.yml
+script: ./setup
 notifications:
   email: false
