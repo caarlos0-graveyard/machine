@@ -1,12 +1,12 @@
 - name: Add Chrome apt keys
   apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release != 'precise'
 - name: Add Chrome PPA
   apt_repository: repo='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release != 'precise'
 - name: Install Chrome
   package: name=google-chrome-stable
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release != 'precise'
 
 - name: Install Chrome
   homebrew_cask: name=google-chrome
