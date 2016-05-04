@@ -7,23 +7,24 @@ if test "$(uname)" = "Darwin"; then
   if test ! "$(which brew)"; then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    brew update
   fi
-  echo "Installing ansible..."
-  brew update
-  brew install ansible
+  if test ! "$(which ansible)"; then
+    echo "Installing ansible..."
+    brew install ansible
+  else
+    brew upgrade ansible
+  fi
 elif test "$(uname)" = "Linux"; then
-  if test -f /etc/lsb-release; then
+  if test -f /etc/lsb-release -a ! "$(which ansible)"; then
     echo "Installing ansible..."
     sudo apt-get install -y software-properties-common
     sudo apt-add-repository -y ppa:ansible/ansible
     sudo apt-get update
     sudo apt-get install -y ansible
   fi
-  cat <<EOF >> ./ansible.cfg
-
-[privilege_escalation]
-become = True
-EOF
+  printf '\n%s\n%s\n' '[privilege_escalation]' 'become = True' >> ansible.cfg
 fi
 
 if test ! "$(which ansible)"; then
