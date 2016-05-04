@@ -5,9 +5,7 @@ matrix:
       dist: trusty
       sudo: required
       python: "3.4"
-      install:
-        - pip install --upgrade pip
-        - pip install ansible
+      install: pip install ansible
     - os: osx
 notifications:
   email: false
