@@ -1,9 +1,9 @@
 - name: Add Docker repository
   apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main'
-  when: ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release != 'precise'
 - name: Install Docker
   package: name=docker-engine
-  when: ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release != 'precise'
 
 # TODO: waiting for docker for mac exit beta
 # - name: Install Docker for Mac
