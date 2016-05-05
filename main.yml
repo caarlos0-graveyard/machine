@@ -3,6 +3,7 @@
     # -
   vars:
     - node_version: 6
+    - is_travis: ansible_env.TRAVIS_JOB_ID is not defined
   tasks:
     # essentials:
     - include: tasks/apt.yml
@@ -33,3 +34,6 @@
     - include: tasks/telegram.yml
     - include: tasks/terminal.yml
     - include: tasks/vpn.yml
+
+    # TODO: dbeaver, skype, intellij, eclipse, vlc, ncdu, fonts?, maven 3.2?,
+    # dropbox, build-essential?

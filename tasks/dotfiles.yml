@@ -1,7 +1,7 @@
 # TODO: remove version here when done.
 - name: Download dotfiles
   git:
-    repo=https://github.com/caarlos0/dotfiles.git
+    repo=git@github.com:caarlos0/dotfiles.git
     dest=~/.dotfiles
     update=yes
     version=ansible
