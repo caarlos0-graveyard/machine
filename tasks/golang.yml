@@ -1,6 +1,6 @@
 - name: Add node repository
   apt_repository: repo='ppa:ubuntu-lxc/lxd-stable'
-  when: ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version|int >= 12.10
 - name: Install Golang
   package: name=golang
   become: ansible_distribution == 'Ubuntu'
