@@ -2,7 +2,7 @@
   apt_repository: repo='ppa:atareao/telegram'
   when: ansible_distribution == 'Ubuntu'
 - name: Install Telegram
-  homebrew_cask: name=telegram
+  package: name=telegram
   when: ansible_distribution == 'Ubuntu'
 
 - name: Install Telegram
