@@ -6,7 +6,7 @@
   with_items:
     - deb
     - deb-src
-  when: ansible_distribution = 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Install Node
   package: name=nodejs
