@@ -7,10 +7,10 @@
   with_items:
     - postgresql
     - postgresql-contrib
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version|int >= 13
 - name: Setup pg_hba
   copy: src=pg_hba.conf dest={{ lookup('pipe', 'ls /etc/postgresql/9.*/main/pg_hba.conf') }} mode=0750
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version|int >= 13
 - name: Setup postgresql.conf
   lineinfile: dest={{ lookup('pipe', 'ls /etc/postgresql/9.*/main/postgresql.conf') }} line="listen_addresses = '*'"
-  when: ansible_os_family == 'Debian'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version|int >= 13
