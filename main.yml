@@ -1,6 +1,8 @@
 - hosts: localhost
   roles:
     # -
+  vars:
+    - node_version: 6
   tasks:
     # essentials:
     - include: tasks/apt.yml
