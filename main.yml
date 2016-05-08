@@ -36,5 +36,5 @@
     - include: tasks/terminal.yml
     - include: tasks/vpn.yml
 
-    # TODO: dbeaver, skype, intellij, eclipse, vlc, ncdu, fonts?, maven 3.2?,
+    # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?,
     # dropbox, build-essential?, vlc
