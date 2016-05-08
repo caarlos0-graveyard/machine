@@ -1,0 +1,13 @@
+# TODO: simplify this once ansible 2.1 is out
+- name: Download Skype
+  get_url:
+    url=http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb
+    dest=/tmp/skype.deb
+  when: ansible_os_family == 'Debian'
+- name: Install Skype
+  apt: deb=/tmp/skype.deb
+  when: ansible_os_family == 'Debian'
+
+- name: Install Skype
+  homebrew_cask: name=skype
+  when: ansible_os_family == 'Darwin'

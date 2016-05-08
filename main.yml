@@ -26,6 +26,7 @@
     - include: tasks/quicklook.yml
       when: ansible_os_family == 'Darwin'
     - include: tasks/ruby.yml
+    - include: tasks/skype.yml
     - include: tasks/slack.yml
     - include: tasks/slate.yml
       when: ansible_os_family == 'Darwin'
@@ -36,4 +37,4 @@
     - include: tasks/vpn.yml
 
     # TODO: dbeaver, skype, intellij, eclipse, vlc, ncdu, fonts?, maven 3.2?,
-    # dropbox, build-essential?
+    # dropbox, build-essential?, vlc
