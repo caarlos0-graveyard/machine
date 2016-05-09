@@ -1,0 +1,6 @@
+- name: Install VLC
+  package: name=vlc
+  when: ansible_os_family == 'Debian'
+- name: Install VLC
+  homebrew_cask: name=vlc
+  when: ansible_os_family == 'Darwin'

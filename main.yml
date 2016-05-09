@@ -34,7 +34,8 @@
     - include: tasks/sublime-text.yml
     - include: tasks/telegram.yml
     - include: tasks/terminal.yml
+    - include: tasks/vlc.yml
     - include: tasks/vpn.yml
 
     # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?,
-    # dropbox, build-essential?, vlc
+    # dropbox, build-essential?
