@@ -1,6 +1,7 @@
 - name: Install Ubuntu-only core packages
   package: name={{item}}
   with_items:
+    - build-essential
     - openssh-server
     - smbclient
     - xsel

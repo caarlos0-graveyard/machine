@@ -38,4 +38,4 @@
     - include: tasks/vpn.yml
 
     # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?,
-    # dropbox, build-essential?
+    # dropbox
