@@ -1,2 +1,3 @@
 - name: Install Slate
   homebrew_cask: name=slate
+  when: ansible_os_family == 'Darwin'

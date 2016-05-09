@@ -7,9 +7,7 @@
   tasks:
     # essentials:
     - include: tasks/apt.yml
-      when: ansible_os_family == 'Debian'
     - include: tasks/homebrew.yml
-      when: ansible_os_family == 'Darwin'
     - include: tasks/core.yml
     - include: tasks/dotfiles.yml
 
@@ -24,12 +22,10 @@
     - include: tasks/postgres.yml
     - include: tasks/python.yml
     - include: tasks/quicklook.yml
-      when: ansible_os_family == 'Darwin'
     - include: tasks/ruby.yml
     - include: tasks/skype.yml
     - include: tasks/slack.yml
     - include: tasks/slate.yml
-      when: ansible_os_family == 'Darwin'
     - include: tasks/spotify.yml
     - include: tasks/sublime-text.yml
     - include: tasks/telegram.yml
