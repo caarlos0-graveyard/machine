@@ -1,0 +1,10 @@
+- name: Add IntelliJ IDEA Community repository
+  apt_repository: repo='ppa:mmk2410/intellij-idea-community'
+  when: is_ubuntu13_plus
+- name: Install IntelliJ IDEA Community
+  package: name=intellij-idea-community
+  when: is_ubuntu13_plus
+
+- name: Install IntelliJ IDEA Community
+  homebrew_cask: name=intellij-idea-ce
+  when: is_osx
