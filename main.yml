@@ -20,9 +20,10 @@
     # specific stuff than can be commented out:
     - include: tasks/atom.yml
     - include: tasks/chrome.yml
+    - include: tasks/dbeaver.yml
     - include: tasks/diffmerge.yml
-    - include: tasks/dropbox.yml
     - include: tasks/docker.yml
+    - include: tasks/dropbox.yml
     - include: tasks/golang.yml
     - include: tasks/java.yml
     - include: tasks/node.yml
@@ -40,4 +41,4 @@
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
 
-    # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?
+    # TODO: intellij, eclipse, fonts?, maven 3.2?

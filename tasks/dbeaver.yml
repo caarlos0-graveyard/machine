@@ -1,0 +1,13 @@
+# TODO: simplify this once ansible 2.1 is out
+- name: Download DBeaver
+  get_url:
+    url=http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
+    dest=/tmp/dbeaver.deb
+  when: is_ubuntu
+- name: Install DBeaver
+  apt: deb=/tmp/dbeaver.deb
+  when: is_ubuntu
+
+- name: Install DBeaver
+  homebrew_cask: name=dbeaver
+  when: is_osx
