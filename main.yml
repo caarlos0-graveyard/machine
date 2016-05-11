@@ -3,8 +3,8 @@
     # -
   vars:
     - node_version: 6
-    - is_ci: ansible_env.TRAVIS_JOB_ID is defined
-    - isnt_ci: ansible_env.TRAVIS_JOB_ID is not defined
+    - is_ci: {{ ansible_env.TRAVIS_JOB_ID is defined }}
+    - isnt_ci: {{ ansible_env.TRAVIS_JOB_ID is not defined }}
   tasks:
     # essentials:
     - include: tasks/apt.yml
