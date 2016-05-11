@@ -3,10 +3,10 @@
   get_url:
     url=https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-1.1.5-amd64.deb
     dest=/tmp/slack.deb
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 - name: Install Slack
   apt: deb=/tmp/slack.deb
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 
 - name: Install Slack
   homebrew_cask: name=slack

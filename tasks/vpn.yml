@@ -3,7 +3,7 @@
   with_items:
     - network-manager-openvpn
     - openvpn
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 - name: Install Viscosity
   homebrew_cask: name=viscosity
   when: is_osx

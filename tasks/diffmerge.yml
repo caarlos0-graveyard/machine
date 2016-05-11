@@ -3,10 +3,10 @@
   get_url:
     url=http://download-us.sourcegear.com/DiffMerge/4.2.0/diffmerge_4.2.0.697.stable_amd64.deb
     dest=/tmp/diffmerge.deb
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 - name: Install DiffMerge
   apt: deb=/tmp/diffmerge.deb
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 
 - name: Install DiffMerge
   homebrew_cask: name=diffmerge

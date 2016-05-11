@@ -1,12 +1,12 @@
 - name: Add Chrome apt keys
   apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub
-  when: is_ubuntu and ansible_distribution_version|int >= 13
+  when: is_ubuntu13_plus
 - name: Add Chrome PPA
   apt_repository: repo='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
-  when: is_ubuntu and ansible_distribution_version|int >= 13
+  when: is_ubuntu13_plus
 - name: Install Chrome
   package: name=google-chrome-stable
-  when: is_ubuntu and ansible_distribution_version|int >= 13
+  when: is_ubuntu13_plus
 
 - name: Install Chrome
   homebrew_cask: name=google-chrome

@@ -1,12 +1,12 @@
 - name: Add Spotify apt keys
   apt_key: keyserver=keyserver.ubuntu.com id=D2C19886
-  when: is_ubuntu and ansible_distribution_version|int >= 15
+  when: is_ubuntu15_plus
 - name: Add Spotify repository
   apt_repository: repo='deb http://repository.spotify.com stable non-free'
-  when: is_ubuntu and ansible_distribution_version|int >= 15
+  when: is_ubuntu15_plus
 - name: Install Spotify
   package: name=spotify-client
-  when: is_ubuntu and ansible_distribution_version|int >= 15
+  when: is_ubuntu15_plus
 
 - name: Install Spotify
   homebrew_cask: name=spotify

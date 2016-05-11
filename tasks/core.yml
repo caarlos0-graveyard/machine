@@ -5,7 +5,7 @@
     - openssh-server
     - smbclient
     - xsel
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 
 - name: Install ubuntu-restricted-extras
   package: name=ubuntu-restricted-extras

@@ -1,10 +1,10 @@
 # TODO: simplify this once ansible 2.1 is out
 - name: Add Atom PPA
   apt_repository: repo='ppa:webupd8team/atom'
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 - name: Install Atom
   package: name=atom
-  when: ansible_os_family == 'Debian'
+  when: is_ubuntu
 
 - name: Install Atom
   homebrew_cask: name=atom
