@@ -9,5 +9,5 @@
   when: is_ubuntu
 
 - name: Install DBeaver
-  homebrew_cask: name=dbeaver
+  homebrew_cask: name=dbeaver-community
   when: is_osx
