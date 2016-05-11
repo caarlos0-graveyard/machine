@@ -21,6 +21,7 @@
     - include: tasks/atom.yml
     - include: tasks/chrome.yml
     - include: tasks/diffmerge.yml
+    - include: tasks/dropbox.yml
     - include: tasks/docker.yml
     - include: tasks/golang.yml
     - include: tasks/java.yml
@@ -39,5 +40,4 @@
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
 
-    # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?,
-    # dropbox
+    # TODO: dbeaver, intellij, eclipse, vlc, fonts?, maven 3.2?

@@ -1,0 +1,13 @@
+# TODO: simplify this once ansible 2.1 is out
+- name: Download Dropbox
+  get_url:
+    url=https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
+    dest=/tmp/dropbox.deb
+  when: is_ubuntu
+- name: Install Dropbox
+  apt: deb=/tmp/dropbox.deb
+  when: is_ubuntu
+
+- name: Install Dropbox
+  homebrew_cask: name=dropbox
+  when: is_osx
