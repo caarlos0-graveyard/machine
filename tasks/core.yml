@@ -9,7 +9,7 @@
 
 - name: Install ubuntu-restricted-extras
   package: name=ubuntu-restricted-extras
-  when: ansible_distribution == 'Ubuntu'
+  when: is_ubuntu
   ignore_errors: True # case multiverse repo is not enabled
 
 - name: Install OSX-only core packages

@@ -7,19 +7,19 @@
 
 - name: Add Java repository
   apt_repository: repo='ppa:webupd8team/java'
-  when: ansible_distribution == 'Ubuntu'
+  when: is_ubuntu
 - name: Accept Java's License
   command: echo {{item}} shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
   with_items:
     - oracle-java7-installer
     - oracle-java8-installer
-  when: ansible_distribution == 'Ubuntu'
+  when: is_ubuntu
 - name: Install Java
   package: name={{item}}
   with_items:
     - oracle-java7-installer
     - oracle-java8-installer
-  when: ansible_distribution == 'Ubuntu'
+  when: is_ubuntu
 
 - name: Install Maven and Gradle
   package: name={{item}}

@@ -6,6 +6,7 @@
     - is_ci: "{{ ansible_env.TRAVIS_JOB_ID is defined }}"
     - isnt_ci: "{{ ansible_env.TRAVIS_JOB_ID is not defined }}"
     - is_osx: "{{ ansible_os_family == 'Darwin' }}"
+    - is_ubuntu: {{ ansible_distribution == 'Ubuntu' }}
   tasks:
     # essentials:
     - include: tasks/apt.yml
