@@ -3,7 +3,7 @@
   with_items:
     - java
     - java7
-  when: ansible_os_family == 'Darwin'
+  when: is_osx
 
 - name: Add Java repository
   apt_repository: repo='ppa:webupd8team/java'

@@ -1,6 +1,6 @@
 - name: Install PostgresApp
   homebrew_cask: name=postgres
-  when: ansible_os_family == 'Darwin'
+  when: is_osx
 
 - name: Install PostgreSQL
   package: name={{item}}

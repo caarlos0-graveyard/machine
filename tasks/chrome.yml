@@ -10,4 +10,4 @@
 
 - name: Install Chrome
   homebrew_cask: name=google-chrome
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

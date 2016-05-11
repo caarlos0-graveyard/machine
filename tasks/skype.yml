@@ -10,4 +10,4 @@
 
 - name: Install Skype
   homebrew_cask: name=skype
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

@@ -8,4 +8,4 @@
 
 - name: Install Atom
   homebrew_cask: name=atom
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

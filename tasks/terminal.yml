@@ -4,4 +4,4 @@
 
 - name: Install iTerm
   homebrew_cask: name=iterm2-beta
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

@@ -7,4 +7,4 @@
 
 - name: Install Telegram
   homebrew_cask: name=telegram
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

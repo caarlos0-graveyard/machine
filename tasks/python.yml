@@ -3,4 +3,4 @@
   package: name=python
 - name: Install PyEnv
   package: name=pyenv
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

@@ -7,4 +7,4 @@
 
 - name: Install SublimeText
   homebrew_cask: name=sublime-text3
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

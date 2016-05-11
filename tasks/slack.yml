@@ -10,4 +10,4 @@
 
 - name: Install Slack
   homebrew_cask: name=slack
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

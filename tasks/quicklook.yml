@@ -12,4 +12,4 @@
     - quicklook-json
     - suspicious-package
     - webpquicklook
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

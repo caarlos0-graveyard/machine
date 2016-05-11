@@ -3,4 +3,4 @@
   package: name=ruby
 - name: Install rbenv
   package: name=rbenv
-  when: ansible_os_family == 'Darwin'
+  when: is_osx

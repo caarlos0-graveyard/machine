@@ -8,4 +8,4 @@
 # TODO: waiting for docker for mac exit beta
 # - name: Install Docker for Mac
 #   homebrew_cask: name=docker
-#   when: ansible_os_family == 'Darwin'
+#   when: is_osx

@@ -10,4 +10,4 @@
 
 - name: Install DiffMerge
   homebrew_cask: name=diffmerge
-  when: ansible_os_family == 'Darwin'
+  when: is_osx
