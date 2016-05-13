@@ -24,8 +24,9 @@
     - include: tasks/diffmerge.yml
     - include: tasks/docker.yml
     - include: tasks/dropbox.yml
-    - include: tasks/intellij.yml
+    - include: tasks/eclipse.yml
     - include: tasks/golang.yml
+    - include: tasks/intellij.yml
     - include: tasks/java.yml
     - include: tasks/node.yml
     - include: tasks/postgres.yml
@@ -42,4 +43,4 @@
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
 
-    # TODO: intellij, eclipse, fonts?, maven 3.2?
+    # TODO: eclipse, fonts?
