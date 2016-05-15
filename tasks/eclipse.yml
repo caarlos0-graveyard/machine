@@ -1,2 +1,0 @@
-- Name download, install and personalize Eclipse IDE
-  shell: curl -fsSL https://raw.githubusercontent.com/caarlos0/my-eclipse/master/install | bash

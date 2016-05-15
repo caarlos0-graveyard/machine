@@ -1,6 +1,4 @@
 - hosts: localhost
-  roles:
-    # -
   vars:
     - node_version: 6
     - is_ci: "{{ ansible_env.TRAVIS_JOB_ID is defined }}"
@@ -24,7 +22,6 @@
     - include: tasks/diffmerge.yml
     - include: tasks/docker.yml
     - include: tasks/dropbox.yml
-    - include: tasks/eclipse.yml
     - include: tasks/golang.yml
     - include: tasks/intellij.yml
     - include: tasks/java.yml
@@ -42,5 +39,5 @@
     - include: tasks/terminal.yml
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
-
-    # TODO: eclipse, fonts?
+  roles:
+    - caarlos0.eclipse
