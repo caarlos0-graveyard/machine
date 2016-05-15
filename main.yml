@@ -24,7 +24,6 @@
     - include: tasks/dropbox.yml
     - include: tasks/golang.yml
     - include: tasks/intellij.yml
-    - include: tasks/java.yml
     - include: tasks/node.yml
     - include: tasks/postgres.yml
     - include: tasks/python.yml
@@ -40,4 +39,5 @@
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
   roles:
+    - caarlos0.java-dev
     - caarlos0.eclipse
