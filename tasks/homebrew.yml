@@ -1,5 +1,5 @@
 - name: Update Homebrew
-  command: brew update
+  homebrew: update_homebrew=yes
   when: is_osx
 - name: Add Homebrew taps
   homebrew_tap: tap={{item}}
