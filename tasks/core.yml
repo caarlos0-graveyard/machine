@@ -37,3 +37,4 @@
     - wget
     - zsh
     - ncdu
+    - tree
