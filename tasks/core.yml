@@ -25,6 +25,7 @@
     - gnutls
     - grc
     - unrar
+    - watch
   when: is_osx
 
 - name: Install core packages
