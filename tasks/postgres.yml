@@ -16,3 +16,7 @@
   when: is_ubuntu and isnt_ci
 - name: Install pg_activity
   pip: name=pg_activity
+  when: is_ubuntu
+- name: Install pg_activity
+  pip: name=pg_activity
+  ignore_errors: yes
