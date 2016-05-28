@@ -21,7 +21,7 @@
     - include: tasks/dbeaver.yml
     - include: tasks/diffmerge.yml
     - include: tasks/docker.yml
-    # - include: tasks/dropbox.yml
+    - include: tasks/dropbox.yml
     - include: tasks/golang.yml
     - include: tasks/intellij.yml
     - include: tasks/node.yml
