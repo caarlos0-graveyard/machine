@@ -3,19 +3,8 @@
   git:
     repo=https://github.com/caarlos0/dotfiles.git
     dest=~/.dotfiles
+    version=master
     update=yes
-  become: false
-- name: Prepare dotfiles for testing
-  shell: >
-    sed -e "s/AUTHORNAME/dotfiles-demo/g"
-    -e "s/AUTHOREMAIL/dotfiles-demo/g"
-    -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g"
-    ~/.dotfiles/git/gitconfig.symlink.example > ~/.dotfiles/git/gitconfig.symlink
-  when: is_ci
-  become: false
-- name: Setup dotfiles for testing
-  shell: cd ~/.dotfiles && ./script/bootstrap --override-all
-  when: is_ci
   become: false
 - name: Setup dotfiles
   shell: cd ~/.dotfiles && ./script/bootstrap
