@@ -1,5 +1,5 @@
 - name: Add Docker repository
-  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main'
+  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
   when: is_ubuntu13_plus
 - name: Install Docker
   package: name=docker-engine

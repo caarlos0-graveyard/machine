@@ -1,5 +1,5 @@
 - name: Install Ubuntu-only core packages
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - build-essential
     - openssh-server
@@ -13,7 +13,7 @@
   ignore_errors: True # case multiverse repo is not enabled
 
 - name: Install OSX-only core packages
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - coreutils
     - findutils
@@ -29,7 +29,7 @@
   when: is_osx
 
 - name: Install core packages
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - curl
     - git

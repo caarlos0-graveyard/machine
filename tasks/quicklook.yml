@@ -1,6 +1,6 @@
 # https://github.com/sindresorhus/quick-look-plugins
 - name: Install QuickLook plugins
-  homebrew_cask: name={{item}}
+  homebrew_cask: name={{ item }}
   with_items:
     - betterzipql
     - qlcolorcode
