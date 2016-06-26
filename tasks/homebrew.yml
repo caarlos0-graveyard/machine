@@ -2,7 +2,7 @@
   homebrew: update_homebrew=yes
   when: is_osx
 - name: Add Homebrew taps
-  homebrew_tap: tap={{item}}
+  homebrew_tap: tap={{ item }}
   with_items:
     - caskroom/cask
     - caskroom/fonts

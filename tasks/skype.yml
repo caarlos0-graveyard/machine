@@ -1,11 +1,5 @@
-# TODO: simplify this once ansible 2.1 is out
-- name: Download Skype
-  get_url:
-    url=http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb
-    dest=/tmp/skype.deb
-  when: is_ubuntu
 - name: Install Skype
-  apt: deb=/tmp/skype.deb
+  apt: deb=http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb
   when: is_ubuntu
 
 - name: Install Skype
