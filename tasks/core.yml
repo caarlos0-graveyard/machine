@@ -1,11 +1,11 @@
 - name: Install Ubuntu-only core packages
-  package: name={{item}}
+  package: name={{ item }}
+  when: is_ubuntu
   with_items:
     - build-essential
     - openssh-server
     - smbclient
     - xsel
-  when: is_ubuntu
 
 - name: Install ubuntu-restricted-extras
   package: name=ubuntu-restricted-extras
@@ -13,7 +13,8 @@
   ignore_errors: True # case multiverse repo is not enabled
 
 - name: Install OSX-only core packages
-  package: name={{item}}
+  package: name={{ item }}
+  when: is_osx
   with_items:
     - coreutils
     - findutils
@@ -25,10 +26,10 @@
     - gnutls
     - grc
     - unrar
-  when: is_osx
+    - watch
 
 - name: Install core packages
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - curl
     - git
@@ -38,3 +39,11 @@
     - zsh
     - ncdu
     - tree
+
+- name: Gets the zsh path
+  shell: which zsh
+  register: bin_zsh
+
+- name: Add homebrew zsh to /etc/shells
+  lineinfile: dest=/etc/shells line='{{ bin_zsh.stdout }}'
+  become: True

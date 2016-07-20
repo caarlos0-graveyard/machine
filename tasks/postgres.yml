@@ -3,7 +3,7 @@
   when: is_osx
 
 - name: Install PostgreSQL
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - postgresql
     - postgresql-contrib

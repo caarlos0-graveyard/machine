@@ -6,5 +6,5 @@
   when: is_ubuntu
 
 - name: Install SublimeText
-  homebrew_cask: name=sublime-text3
+  homebrew_cask: name=sublime-text
   when: is_osx

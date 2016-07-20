@@ -1,5 +1,5 @@
 - name: Install OpenVPN stuff
-  package: name={{item}}
+  package: name={{ item }}
   with_items:
     - network-manager-openvpn
     - openvpn
