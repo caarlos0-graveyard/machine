@@ -14,3 +14,6 @@
 - name: Setup postgresql.conf
   lineinfile: dest={{ lookup('pipe', 'ls /etc/postgresql/9.*/main/postgresql.conf') }} line="listen_addresses = '*'"
   when: is_ubuntu and isnt_ci
+- name: Install pg_activity
+  pip: name=pg_activity
+  ignore_errors: yes
