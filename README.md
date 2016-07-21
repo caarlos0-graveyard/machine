@@ -25,3 +25,10 @@ out stuff you don't want, when you're done, simply run:
 ```console
 $ ./setup
 ```
+
+## Known Bugs
+
+- Due to an [ansible bug](https://github.com/ansible/ansible-modules-core/issues/3752),
+this may not work on Ubuntu machines with ansible 2.1.0.0. You can install
+ansible 2.2.0.0 using `pip` with `pip install git+git://github.com/ansible/ansible.git@devel`
+to avoid this problem.
