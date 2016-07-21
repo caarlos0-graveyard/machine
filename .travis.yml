@@ -5,15 +5,10 @@ python:
 os:
   - linux
   - osx
-# matrix:
-#   include:
-#     - os: linux
-#       dist: trusty
-#       sudo: required
-#       python: "3.4"
-#       install: pip install ansible
-#     - os: osx
 notifications:
   email: false
 install: sudo pip install git+git://github.com/ansible/ansible.git@devel
-script: ./setup
+script:
+  - git config --global user.name "Test name"
+  - git config --global user.email "test@localhost"
+  - ./setup
