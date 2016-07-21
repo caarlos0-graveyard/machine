@@ -1,5 +1,7 @@
 language: generic
 sudo: required
+python:
+  - 2.7
 os:
   - linux
   - osx
@@ -13,4 +15,5 @@ os:
 #     - os: osx
 notifications:
   email: false
+install: pip install git+git://github.com/ansible/ansible.git@devel
 script: ./setup
