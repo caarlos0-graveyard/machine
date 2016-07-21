@@ -1,10 +1,13 @@
 language: generic
 sudo: required
+python:
+  - 2.7
 os:
   - linux
   - osx
 notifications:
   email: false
+install: sudo pip install git+git://github.com/ansible/ansible.git@devel
 script:
   - git config --global user.name "Test name"
   - git config --global user.email "test@localhost"
