@@ -24,6 +24,7 @@
     - include: tasks/dropbox.yml
     - include: tasks/golang.yml
     - include: tasks/intellij.yml
+    - include: tasks/ngrok.yml
     - include: tasks/node.yml
     - include: tasks/postgres.yml
     - include: tasks/python.yml

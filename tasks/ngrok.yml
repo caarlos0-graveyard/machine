@@ -1,0 +1,7 @@
+- name: Install ngrok
+  unarchive: src=https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip dest=/usr/local/bin copy=no
+  when: is_ubuntu
+
+- name: Install ngrok
+  package: name=eqnxio/ngrok/ngrok
+  when: is_osx
