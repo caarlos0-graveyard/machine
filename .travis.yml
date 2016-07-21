@@ -15,5 +15,5 @@ os:
 #     - os: osx
 notifications:
   email: false
-install: pip install git+git://github.com/ansible/ansible.git@devel
+install: sudo pip install git+git://github.com/ansible/ansible.git@devel
 script: ./setup
