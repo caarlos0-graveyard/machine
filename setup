@@ -36,3 +36,4 @@ python --version
 ansible --version
 ansible-galaxy install -r requirements.yml -p roles
 ansible-playbook main.yml
+test -d ~/.dotfiles && cd ~/.dotfiles && ./script/bootstrap

@@ -3,14 +3,9 @@ sudo: required
 os:
   - linux
   - osx
-# matrix:
-#   include:
-#     - os: linux
-#       dist: trusty
-#       sudo: required
-#       python: "3.4"
-#       install: pip install ansible
-#     - os: osx
 notifications:
   email: false
-script: ./setup
+script:
+  - git config --global user.name "Test name"
+  - git config --global user.email "test@localhost"
+  - ./setup
