@@ -39,6 +39,7 @@
     - include: tasks/terminal.yml
     - include: tasks/vlc.yml
     - include: tasks/vpn.yml
+    - include: tasks/whatsapp.yml
   roles:
     - caarlos0.java-dev
     - caarlos0.eclipse
