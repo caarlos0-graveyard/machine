@@ -1,0 +1,6 @@
+# TODO: add ubuntu install when PPA is created:
+# https://github.com/Microsoft/vscode/issues/2973
+
+- name: Install VisualStudio Code
+  homebrew_cask: name=visual-studio-code
+  when: is_osx
