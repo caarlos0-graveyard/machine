@@ -25,6 +25,7 @@
     - gnu-tar
     - gnutls
     - grc
+    - pgp
     - unrar
     - watch
 
