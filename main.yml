@@ -17,6 +17,7 @@
 
     # specific stuff than can be commented out:
     - include: tasks/atom.yml
+    - include: tasks/awscli.yml
     - include: tasks/chrome.yml
     - include: tasks/dbeaver.yml
     - include: tasks/diffmerge.yml
