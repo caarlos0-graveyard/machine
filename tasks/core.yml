@@ -24,8 +24,9 @@
     - gnu-sed
     - gnu-tar
     - gnutls
-    - grc
     - gpg
+    - grc
+    - pstree
     - unrar
     - watch
 
