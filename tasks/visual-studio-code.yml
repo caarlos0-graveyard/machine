@@ -1,5 +1,14 @@
-# TODO: add ubuntu install when PPA is created:
+# TODO: use official ubuntu PPA when it's available:
 # https://github.com/Microsoft/vscode/issues/2973
+- name: Add VisualStudio Code apt keys
+  apt_key: url=https://tagplus5.github.io/vscode-ppa/ubuntu/gpg.key
+  when: is_ubuntu
+- name: Add VisualStudio Code repository
+  apt_repository: repo='deb https://tagplus5.github.io/vscode-ppa/ubuntu ./'
+  when: is_ubuntu
+- name: Install VisualStudio Code
+  package: name=code
+  when: is_ubuntu
 
 - name: Install VisualStudio Code
   homebrew_cask: name=visual-studio-code
