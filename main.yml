@@ -24,6 +24,7 @@
     - include: tasks/docker.yml
     - include: tasks/dropbox.yml
     - include: tasks/golang.yml
+    - include: tasks/google-drive.yml
     - include: tasks/intellij.yml
     - include: tasks/ngrok.yml
     - include: tasks/node.yml
