@@ -1,0 +1,3 @@
+- name: Install Google Drive
+  homebrew_cask: name=google-drive
+  when: is_osx
