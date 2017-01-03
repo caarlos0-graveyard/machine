@@ -45,4 +45,3 @@
     - include: tasks/whatsapp.yml
   roles:
     - caarlos0.java-dev
-    - caarlos0.eclipse
