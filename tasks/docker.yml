@@ -2,7 +2,7 @@
   apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
   when: is_ubuntu13_plus
 - name: Install Docker
-  package: name=docker-engine
+  package: name=docker-engine allow_unauthenticated=yes
   when: is_ubuntu13_plus
 
 # TODO: waiting for docker for mac exit beta
