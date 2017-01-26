@@ -49,3 +49,10 @@
 - name: Add homebrew zsh to /etc/shells
   lineinfile: dest=/etc/shells line='{{ bin_zsh.stdout }}'
   become: True
+
+- name: Install OSX-only apps
+  homebrew_cask: name={{ item }}
+  when: is_osx
+  with_items:
+   - appcleaner
+   - day-o
