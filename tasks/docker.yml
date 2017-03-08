@@ -1,3 +1,6 @@
+- name: Add Docker keys
+  apt_key: url=https://apt.dockerproject.org/gpg
+  when: is_ubuntu13_plus
 - name: Add Docker repository
   apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
   when: is_ubuntu13_plus
