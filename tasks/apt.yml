@@ -1,3 +1,14 @@
+- apt_repository:
+    repo: '{{ item }}'
+    update_cache: no
+  register: multiverse_installed
+  with_items:
+    - 'deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} multiverse'
+    - 'deb-src http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} multiverse'
+    - 'deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }}-updates multiverse'
+    - 'deb-src http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }}-updates multiverse'
+  when: is_ubuntu
+
 - name: Update apt
   apt: update_cache=yes
   when: is_ubuntu

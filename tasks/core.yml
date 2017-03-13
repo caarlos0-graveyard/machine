@@ -7,10 +7,6 @@
     - smbclient
     - xsel
 
-- name: Enable multiverse
-  apt_repository: repo=multiverse
-  when: is_ubuntu13_plus
-
 - name: Install ubuntu-restricted-extras
   package: name=ubuntu-restricted-extras
   when: is_ubuntu
