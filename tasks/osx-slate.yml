@@ -1,3 +1,0 @@
-- name: Install Slate
-  homebrew_cask: name=slate
-  when: is_osx

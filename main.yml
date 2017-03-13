@@ -37,8 +37,6 @@
     - include: tasks/awscli.yml
     - include: tasks/docker.yml
     - include: tasks/ngrok.yml
-    - include: tasks/osx-quicklook.yml
-    - include: tasks/osx-slate.yml
     - include: tasks/vpn.yml
 
     # languages
