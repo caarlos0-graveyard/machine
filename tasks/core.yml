@@ -10,7 +10,6 @@
 - name: Install ubuntu-restricted-extras
   package: name=ubuntu-restricted-extras
   when: is_ubuntu
-  ignore_errors: True # case multiverse repo is not enabled
 
 - name: Install OSX-only core packages
   package: name={{ item }}
@@ -54,5 +53,17 @@
   homebrew_cask: name={{ item }}
   when: is_osx
   with_items:
-   - appcleaner
-   - day-o
+    - appcleaner
+    - day-o
+    - slate
+    # https://github.com/sindresorhus/quick-look-plugins
+    - betterzipql
+    - qlcolorcode
+    - qlimagesize
+    - qlmarkdown
+    - qlprettypatch
+    - qlstephen
+    - quicklook-csv
+    - quicklook-json
+    - suspicious-package
+    - webpquicklook

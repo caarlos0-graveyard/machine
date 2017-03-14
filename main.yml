@@ -15,33 +15,49 @@
     - include: tasks/core.yml
     - include: tasks/dotfiles.yml
 
-    # specific stuff than can be commented out:
+    #
+    # specific stuff than can be commented out
+    #
+    # editors, IDEs, terminals, etc
     - include: tasks/atom.yml
-    - include: tasks/awscli.yml
-    - include: tasks/chrome.yml
-    - include: tasks/dbeaver.yml
     - include: tasks/diffmerge.yml
-    - include: tasks/docker.yml
-    - include: tasks/dropbox.yml
-    - include: tasks/golang.yml
-    - include: tasks/google-drive.yml
     - include: tasks/intellij.yml
-    - include: tasks/ngrok.yml
-    - include: tasks/node.yml
-    - include: tasks/postgres.yml
-    - include: tasks/python.yml
-    - include: tasks/quicklook.yml
-    - include: tasks/ruby.yml
-    - include: tasks/skype.yml
-    - include: tasks/slack.yml
-    - include: tasks/slate.yml
-    - include: tasks/spotify.yml
     - include: tasks/sublime-text.yml
-    - include: tasks/telegram.yml
     - include: tasks/terminal.yml
     - include: tasks/visual-studio-code.yml
-    - include: tasks/vlc.yml
+
+    # browsers
+    - include: tasks/chrome.yml
+
+    # database
+    - include: tasks/dbeaver.yml
+    - include: tasks/postgres.yml
+
+    # tools
+    - include: tasks/awscli.yml
+    - include: tasks/docker.yml
+    - include: tasks/ngrok.yml
     - include: tasks/vpn.yml
+
+    # languages
+    - include: tasks/golang.yml
+    - include: tasks/node.yml
+    - include: tasks/python.yml
+    - include: tasks/ruby.yml
+
+    # backup
+    - include: tasks/dropbox.yml
+    - include: tasks/google-drive.yml
+
+    # chat
+    - include: tasks/skype.yml
+    - include: tasks/slack.yml
+    - include: tasks/telegram.yml
     - include: tasks/whatsapp.yml
+
+    # media
+    - include: tasks/spotify.yml
+    - include: tasks/vlc.yml
+
   roles:
     - caarlos0.java-dev
