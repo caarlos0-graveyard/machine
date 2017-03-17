@@ -1,12 +1,12 @@
 - hosts: localhost
   vars:
     - node_version: 6
-    - is_ci: "{{ ansible_env.TRAVIS_JOB_ID is defined }}"
-    - isnt_ci: "{{ ansible_env.TRAVIS_JOB_ID is not defined }}"
-    - is_osx: "{{ ansible_os_family == 'Darwin' }}"
-    - is_ubuntu: "{{ ansible_distribution == 'Ubuntu' }}"
-    - is_ubuntu13_plus: "{{ is_ubuntu and ansible_distribution_version|int >= 13 }}"
-    - is_ubuntu15_plus: "{{ is_ubuntu and ansible_distribution_version|int >= 15 }}"
+    - is_ci: ansible_env.TRAVIS_JOB_ID is defined
+    - isnt_ci: ansible_env.TRAVIS_JOB_ID is not defined
+    - is_osx: ansible_os_family == 'Darwin'
+    - is_ubuntu: ansible_distribution == 'Ubuntu'
+    - is_ubuntu13_plus: is_ubuntu and ansible_distribution_version|int >= 13
+    - is_ubuntu15_plus: is_ubuntu and ansible_distribution_version|int >= 15
 
   tasks:
     # essentials:
