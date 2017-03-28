@@ -8,7 +8,6 @@
   package: name=docker-engine allow_unauthenticated=yes
   when: is_ubuntu13_plus
 
-# TODO: waiting for docker for mac exit beta
-# - name: Install Docker for Mac
-#   homebrew_cask: name=docker
-#   when: is_osx
+- name: Install Docker for Mac
+  homebrew_cask: name=docker
+  when: is_osx
