@@ -1,6 +1,6 @@
 - hosts: localhost
   vars:
-    - node_version: 6
+    - node_version: 7 
     - is_ci: ansible_env.TRAVIS_JOB_ID is defined
     - isnt_ci: ansible_env.TRAVIS_JOB_ID is not defined
     - is_osx: ansible_os_family == 'Darwin'
