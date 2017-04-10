@@ -1,0 +1,32 @@
+- name: Install JDK 7 and 8
+  homebrew_cask: name={{ item }}
+  when: is_osx
+  with_items:
+    - java
+    - java7
+- name: Add webupd8team/java apt repository
+  apt_repository: repo='ppa:webupd8team/java'
+  become: True
+  when: is_ubuntu
+- name: Accept Oracle's License
+  debconf: name="{{ item }}" question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+  become: True
+  when: is_ubuntu
+  with_items:
+    - oracle-java7-installer
+    - oracle-java8-installer
+- name: Install JDK 7 and 8
+  package: name={{ item }}
+  become: True
+  when: is_ubuntu
+  with_items:
+    - oracle-java7-installer
+    - oracle-java8-installer
+- name: Set JDK8 as default
+  command: update-java-alternatives -s java-8-oracle
+  become: True
+  when: is_ubuntu
+
+- name: Install maven
+  package: name=maven
+  become: is_ubuntu

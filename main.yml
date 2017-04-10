@@ -41,6 +41,7 @@
 
     # languages
     - include: tasks/golang.yml
+    - include: tasks/java.yml
     - include: tasks/node.yml
     - include: tasks/python.yml
     - include: tasks/ruby.yml
@@ -58,6 +59,3 @@
     # media
     - include: tasks/spotify.yml
     - include: tasks/vlc.yml
-
-  roles:
-    - caarlos0.java-dev
