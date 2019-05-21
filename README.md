@@ -1,3 +1,11 @@
+this project is outdated/abandoned/archived and will not be updated anymore.
+
+check [this issue](https://github.com/caarlos0/machine/issues/40) for more details.
+
+
+---
+
+
 # machine [![Build Status](https://travis-ci.org/caarlos0/machine.svg?branch=master)](https://travis-ci.org/caarlos0/machine) [![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
 Machine setup, powered by Ansible.
